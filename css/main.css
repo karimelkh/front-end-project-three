@@ -626,19 +626,79 @@ header .container .mega-menu .links li a i {
     gap: 40px;
 }
 .team-members .container .member {
-
+    padding-top: 60px;
+    position: relative;
 }
-.team-members .container .member img {
-
+.team-members .container .member::before {
+    content: "";
+    width: 84%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    border-radius: 10px;
+    background-color: #f3f3f3;
 }
-.team-members .container .member .social {
-
+.team-members .container .member::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+    background-color: #e4e4e4;
+    transition-property: width;
+    transition-duration: var(--main-trans-duration, 0.3s);
 }
-.team-members .container .member .social i {
-
+.team-members .container .member:hover::after {
+    width: 84%;
 }
-
-
+.team-members .container .member .data {
+    display: flex;
+    align-items: center;
+}
+.team-members .container .member .data img {
+    width: 84%;
+    border-radius: 10px;
+    transition-property: filter;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+.team-members .container .member:hover .data img {
+    filter: grayscale(1);
+}
+.team-members .container .member .data .social {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.team-members .container .member .data .social a {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team-members .container .member .data .social a i {
+    color: #777;
+    transition-property: color;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+.team-members .container .member .data .social a:hover i {
+    color: var(--main-color, #2196f3);
+}
+.team-members .container .member .text {
+    margin: 20px 0 20px 80px;
+}
+.team-members .container .member .text h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: var(--main-color, #2196f3);
+}
 
 
 /* / Team members */
