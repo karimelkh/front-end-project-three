@@ -783,7 +783,52 @@ header .container .mega-menu .links li a i {
     transform: skewX(-30deg);
     background-color: #d5d5d5;
 }
-
-
-
 /* / Services */
+
+/* Skills */
+.skills {
+    padding-top: var(--section-padding, 100px);
+    padding-bottom: var(--section-padding, 100px);
+}
+.skills .container {
+    display: flex;
+}
+@media (max-width: 991px) {
+    .skills .container img {
+        display: none;
+    }
+}
+.skills .container .skill-bars {
+    flex-grow: 1;
+}
+.skills .container .skill-bars .bar h3 {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+.skills .container .skill-bars .bar h3 span {
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    color: var(--main-color, #2196f3);
+}
+.skills .container .skill-bars .bar .progress {
+    width: 100%;
+    height: 30px;
+    background-color: #eee;
+}
+.skills .container .skill-bars .bar .progress span {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background-color: var(--main-color, #2196f3);
+}
+
+
+
+/* / Skills */
