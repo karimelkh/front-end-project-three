@@ -1119,15 +1119,61 @@ header .container .mega-menu .links li a i {
     background-color: var(--main-color, #2196f3);
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
 /* / Pricing */
+
+/* Videos */
+.videos {
+    padding-top: var(--section-padding, 100px);
+    padding-bottom: var(--section-padding, 100px);
+}
+.videos .container .holder {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+.videos .container .timeline {
+    min-width: 300px;
+}
+.videos .container .timeline .name {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+}
+.videos .container .timeline ul li {
+    padding: 20px;
+    border-top: 1px solid #ececec;
+    transition-property: background-color;
+    transition-duration: var(--main-trans-duration, 0.3s);
+    cursor: pointer;
+}
+.videos .container .timeline ul li:hover {
+    background-color: #fafafa;
+}
+.videos .container .timeline ul li .chapter {
+    margin-bottom: 10px;
+    transition-property: color;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+.videos .container .timeline ul li:hover .chapter {
+    color: var(--main-color, #2196f3);
+}
+.videos .container .timeline ul li .timing {
+    color: var(--sec-txt-color, #777);
+}
+.videos .container .preview {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e2e2e2;
+}
+.videos .container .preview img {
+    width: 100%;
+}
+.videos .container .preview .info {
+    padding: 20px;
+    background-color: white;
+}
+/* / Videos */
