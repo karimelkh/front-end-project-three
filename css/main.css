@@ -27,7 +27,7 @@ body {
     font-family: var(--main-font-family, Arial, Helvetica);
 
     /* temp */
-    height: 12000px;
+    height: 20000px;
 }
 a {
     text-decoration: none;
@@ -117,6 +117,20 @@ h1.main-title:hover::after {
 }
 section > h1.main-title {
     z-index: 1; /* temp solution */
+}
+.dots {
+    width: 204px;
+    height: 186px;
+    position: absolute;
+    background-image: url(../images/dots.png);
+}
+.dots-up {
+    top: 200px;
+    right: 0;
+}
+.dots-down {
+    bottom: 200px;
+    left: 0;
 }
 /* / Components */
 
@@ -905,20 +919,6 @@ header .container .mega-menu .links li a i {
     padding-bottom: var(--section-padding, 100px);
     position: relative;
 }
-.dots {
-    width: 204px;
-    height: 186px;
-    position: absolute;
-    background-image: url(../images/dots.png);
-}
-.dots-up {
-    top: 200px;
-    right: 0;
-}
-.dots-down {
-    bottom: 200px;
-    left: 0;
-}
 .events .container {
     margin-bottom: 80px;
     display: flex;
@@ -1007,3 +1007,127 @@ header .container .mega-menu .links li a i {
     background-color: var(--main-color-alt, #1787e0);
 }
 /* / Events */
+
+/* Pricing */
+.pricing {
+    padding-top: var(--section-padding, 100px);
+    padding-bottom: var(--section-padding, 100px);
+    position: relative;
+    background-color: var(--section-bg-color, #ececec);
+}
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+    /* temp solution - dots */
+    position: relative;
+    z-index: 1;
+}
+.pricing .container .plan {
+    padding: 36px 0;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    isolation: isolate;
+}
+@media (min-width: 1200px) {
+    .pricing .container .plan:nth-child(2) {
+        transform: translateY(-10px);
+    }
+}
+.pricing .container .plan:nth-child(2) label {
+    width: 40px;
+    padding: 10px 10px 30px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    writing-mode: vertical-lr;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--main-color);
+    color: white;
+}
+.pricing .container .plan:nth-child(2) label::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent transparent white transparent;
+}
+.pricing .container .plan::before,
+.pricing .container .plan::after {
+    content: "";
+    width: 0;
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+    background-color: #f6f6f6;
+    transition-property: width;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+.pricing .container .plan::before {
+    top: 0;
+    left: 0;
+}
+.pricing .container .plan::after {
+    bottom: 0;
+    right: 0;
+}
+.pricing .container .plan:hover::before,
+.pricing .container .plan:hover::after {
+    width: 100%;
+}
+.pricing .container .plan img {
+    width: 80px;
+    margin: 30px 0;
+}
+.pricing .container .plan span {
+    display: block;
+}
+.pricing .container .plan .price {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--main-color, #2196f3);
+}
+.pricing .container .plan .billing-period {
+    margin: 5px 0 20px;
+    color: var(--sec-txt-color, #777);
+}
+.pricing .container .plan ul {
+    margin-bottom: 30px;
+}
+.pricing .container .plan ul li {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    text-align: left;
+}
+.pricing .container .plan button {
+    padding: 15px 20px;
+    font-weight: 700;
+    border: 2px solid var(--main-color, #2196f3);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--main-color, #2196f3);
+    transition-property: color, background-color;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+.pricing .container .plan button:hover {
+    background-color: var(--main-color, #2196f3);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* / Pricing */
