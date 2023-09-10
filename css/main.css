@@ -1177,3 +1177,79 @@ header .container .mega-menu .links li a i {
     background-color: white;
 }
 /* / Videos */
+
+/* Stats */
+.stats {
+    padding-top: var(--section-padding, 100px);
+    padding-bottom: var(--section-padding, 100px);
+    position: relative;
+    background-image: url(../images/stats.jpg);
+    background-size: cover;
+    min-height: 300px;
+    isolation: isolate;
+}
+.stats::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.stats > h1 {
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.stats .container .box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+}
+.stats .container .box::before,
+.stats .container .box::after {
+    content: "";
+    height: 0;
+    width: 1.5px;
+    position: absolute;
+    background-color: var(--main-color, #2196f3);
+    transition-property: height;
+    transition-duration: 0.5s;
+}
+.stats .container .box::before {
+    bottom: 0;
+    left: 0;
+}
+.stats .container .box::after {
+    top: 0;
+    right: 0;
+}
+.stats .container .box:hover::before,
+.stats .container .box:hover::after {
+    height: 100%;
+}
+.stats .container .box i {
+    font-size: 34px;
+}
+.stats .container .box .number {
+    margin: 10px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.stats .container .box .text {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--main-color, #2196f3);
+}
+/* / Stats */
