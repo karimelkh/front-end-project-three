@@ -25,9 +25,6 @@ html {
 }
 body {
     font-family: var(--main-font-family, Arial, Helvetica);
-
-    /* temp */
-    height: 20000px;
 }
 a {
     text-decoration: none;
@@ -1266,8 +1263,8 @@ header .container .mega-menu .links li a i {
     flex-wrap: wrap;
 }
 .discount > div {
-    padding-top: var(calc(--section-padding / 2), 50px);
-    padding-bottom: var(calc(--section-padding / 2), 50px);
+    padding-top: calc(var(--section-padding, 100px) / 2);
+    padding-bottom: calc(var(--section-padding, 100px) / 2);
     flex-basis: 50%;
     text-align: center;
 }
@@ -1346,3 +1343,110 @@ header .container .mega-menu .links li a i {
     background-color: var(--main-color-alt, #1787e0);
 }
 /* / Discount */
+
+/* Footer */
+footer {
+    padding-top: calc(var(--section-padding, 100px) / 2);
+    background-color: #191919;
+    color: #b9b9b9;
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+footer .container .social h1 {
+    margin: 0;
+    font-size: 50px;
+    color: white;
+}
+footer .container .social ul {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+footer .container .social ul li {
+    margin-right: 10px;
+}
+footer .container .links li:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+footer .container .social ul li a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #313131;
+    color: #b9b9b9;
+    transition-property: background-color;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+footer .container .social ul li:first-child a:hover,
+footer .container .social ul li:last-child a:hover {
+    background-color: black;
+}
+footer .container .social ul li:nth-child(2) a:hover {
+    background-color: #0A66C2;
+}
+footer .container .social ul li a i {
+    font-size: 30px;
+    transition-property: color;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+footer .container .social ul li a:hover i {
+    color: white;
+}
+footer .container .social p {
+    line-height: 1.6;
+}
+footer .container .links li a {
+    padding: 15px 0;
+    display: inline-block;
+    color: inherit;
+    transition-property: color, transform;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+footer .container .links li a::before {
+    margin-right: 10px;
+    font-family: 'font awesome 6 free';
+    content: '\f101';
+    font-weight: 900;
+    color: var(--main-color, #2196f3);
+}
+footer .container .links li:hover a {
+    transform: translateX(10px);
+    color: white;
+}
+footer .container address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+footer .container address > div {
+    display: flex;
+    align-items: center;
+}
+footer .container address > div i {
+    margin-right: 10px;
+    font-size: 26px;
+    color: var(--main-color, #2196f3);
+}
+footer .container .images {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+}
+footer .container .images img {
+    width: 100%;
+    border: 3px solid white;
+}
+footer > p {
+    margin: 50px 0 0;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+/* / Footer */
