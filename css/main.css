@@ -159,6 +159,11 @@ section > h1.main-title {
         opacity: 0;
     }
 }
+@keyframes change-background {
+    to {
+        background-image: url(../images/discount-background2.jpg);
+    }
+}
 /* / Keyframes */
 
 /* Header */
@@ -1253,3 +1258,91 @@ header .container .mega-menu .links li a i {
     color: var(--main-color, #2196f3);
 }
 /* / Stats */
+
+/* Discount */
+.discount {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.discount > div {
+    padding-top: var(calc(--section-padding / 2), 50px);
+    padding-bottom: var(calc(--section-padding / 2), 50px);
+    flex-basis: 50%;
+    text-align: center;
+}
+.discount > div h1 {
+    font-size: 40px;
+}
+.discount .have-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    background-image: url(../images/discount-background1.jpg);
+    color: white;
+    animation: change-background 10s infinite;
+}
+.discount .have-discount::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(33, 150, 243, 0.95);
+}
+.discount .have-discount .content {
+    max-width: 500px;
+}
+.discount .have-discount .content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.discount .have-discount img {
+    width: 300px;
+    margin-top: 50px;
+}
+.discount .request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.discount .request form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.discount .request form input,
+.discount .request form textarea {
+    width: 300px;
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    caret-color: var(--main-color, #2196f3);
+    background-color: #f9f9f9;
+}
+.discount .request form textarea {
+    height: 200px;
+    resize: none;
+}
+.discount .request form input:focus,
+.discount .request form textarea:focus {
+    outline: none;
+}
+.discount .request form input[type="submit"] {
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    background-color: var(--main-color, #2196f3);
+    color: white;
+    transition-property: background-color;
+    transition-duration: var(--main-trans-duration, 0.3s);
+}
+.discount .request form input[type="submit"]:hover {
+    background-color: var(--main-color-alt, #1787e0);
+}
+/* / Discount */
