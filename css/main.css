@@ -75,14 +75,14 @@ h1.main-title {
     font-size: 30px;
     text-transform: uppercase;
     border: 2px solid black;
+    transition-property: color, border-color;
     transition-duration: var(--main-trans-duration, 0.3s);
     isolation: isolate;
 }
 h1.main-title:hover {
     color: white;
     border-color: transparent;
-    transition-duration: var(--main-trans-duration, 0.3s);
-    transition-delay: 0.5s;
+    transition-delay: 0.7s;
 }
 h1.main-title::before,
 h1.main-title::after {
@@ -95,6 +95,7 @@ h1.main-title::after {
     z-index: -1;
     border-radius: 50%;
     background-color: var(--main-color, #2196f3);
+    transition-property: animation, left, right;
     transition-duration: var(--main-trans-duration, 0.3s);
 }
 h1.main-title::before {
@@ -105,7 +106,7 @@ h1.main-title::after {
 }
 h1.main-title:hover::before,
 h1.main-title:hover::after {
-    animation: expansion 0.5s linear forwards;
+    animation: expansion 0.5s 0.2s linear forwards;
 }
 h1.main-title:hover::before {
     left: 0;
@@ -131,8 +132,8 @@ h1.main-title:hover::after {
 
 /* Keyframes */
 @keyframes up-down {
-    0% {transform: translateY(-10%);}
-    100% {transform: translateY(10%);}
+    0% {transform: translateY(-20px)}
+    100% {transform: translateY(20px)}
 }
 @keyframes bouncing {
     0%,
@@ -325,18 +326,6 @@ header .container .mega-menu .links li a i {
     background-color: var(--section-bg-color, #ececec);
     transform: skewY(-5deg);
 }
-.landing .container > a::after {
-    content: '\f103';
-    font-family: 'font awesome 6 free';
-    font-size: 30px;
-    font-weight: 900;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--main-color, #2196f3);
-    animation: bouncing 1.5s infinite;
-}
 .landing .container {
     height: 100%;
     padding-bottom: 120px;
@@ -373,9 +362,21 @@ header .container .mega-menu .links li a i {
 }
 .landing .container .landing-image img {
     width: 100%;
-    animation: up-down 5s linear infinite alternate;
+    animation: up-down 4s linear infinite alternate;
     position: relative;
     z-index: 1;
+}
+.landing .container > a::after {
+    content: '\f103';
+    font-family: 'font awesome 6 free';
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color, #2196f3);
+    animation: bouncing 1.5s infinite;
 }
 /* Landing */
 
@@ -1244,7 +1245,7 @@ header .container .mega-menu .links li a i {
 .stats .container .box::after {
     content: "";
     height: 0;
-    width: 1.5px;
+    width: 2px;
     position: absolute;
     background-color: var(--main-color, #2196f3);
     transition-property: height;
