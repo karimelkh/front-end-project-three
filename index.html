@@ -268,11 +268,11 @@
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </section>
     <!-- / Articles -->
+
+    <div class="spikes"></div>
 
     <!-- Gallery -->
     <section class="gallery" id="gallery">
@@ -284,32 +284,44 @@
 
             <!-- box 1 -->
             <div class="box">
-                <img src="images/gallery-01.png">
+                <div class="img-holder">
+                    <img src="images/gallery-01.png">
+                </div>
             </div>
 
             <!-- box 2 -->
             <div class="box">
-                <img src="images/gallery-02.png">
+                <div class="img-holder">
+                    <img src="images/gallery-02.png">
+                </div>
             </div>
 
             <!-- box 3 -->
             <div class="box">
-                <img src="images/gallery-03.jpg">
+                <div class="img-holder">
+                    <img src="images/gallery-03.jpg">
+                </div>
             </div>
 
             <!-- box 4 -->
             <div class="box">
-                <img src="images/gallery-04.png">
+                <div class="img-holder">
+                    <img src="images/gallery-04.png">
+                </div>
             </div>
 
             <!-- box 5 -->
             <div class="box">
-                <img src="images/gallery-05.jpg">
+                <div class="img-holder">
+                    <img src="images/gallery-05.jpg">
+                </div>
             </div>
 
             <!-- box 6 -->
             <div class="box">
-                <img src="images/gallery-06.png">
+                <div class="img-holder">
+                    <img src="images/gallery-06.png">
+                </div>
             </div>
         </div>
     </section>
@@ -351,7 +363,7 @@
                         The time we invest in our projects 
                         is the currency of progress, 
                         shaping our goals, and sculpting 
-                        our future achievements.
+                        our achievements.
                     </p>
                     <button>More</button>
                 </div>
@@ -662,6 +674,8 @@
     </section>
     <!-- / Team members -->
 
+    <div class="spikes"></div>
+
     <!-- Services -->
     <section class="services" id="services">
 
@@ -673,7 +687,7 @@
             <div class="service">
                 <i class="fa-solid fa-user-shield"></i>
                 <h3>Security</h3>
-                <div class="info" data-count="01">
+                <div class="info">
                     <a href="#">Details</a>
                 </div>
             </div>
@@ -682,7 +696,7 @@
             <div class="service">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
                 <h3>Fixing Issues</h3>
-                <div class="info" data-count="02">
+                <div class="info">
                     <a href="#">Details</a>
                 </div>
             </div>
@@ -691,7 +705,7 @@
             <div class="service">
                 <i class="fa-solid fa-map-location-dot"></i>
                 <h3>Location</h3>
-                <div class="info" data-count="03">
+                <div class="info">
                     <a href="#">Details</a>
                 </div>
             </div>
@@ -700,7 +714,7 @@
             <div class="service">
                 <i class="fa-solid fa-laptop-code"></i>
                 <h3>Coding</h3>
-                <div class="info" data-count="04">
+                <div class="info">
                     <a href="#">Details</a>
                 </div>
             </div>
@@ -709,7 +723,7 @@
             <div class="service">
                 <i class="fa-solid fa-palette"></i>
                 <h3>UI/UX Design</h3>
-                <div class="info" data-count="05">
+                <div class="info">
                     <a href="#">Details</a>
                 </div>
             </div>
@@ -718,7 +732,7 @@
             <div class="service">
                 <i class="fa-solid fa-bullhorn"></i>
                 <h3>Marketing</h3>
-                <div class="info" data-count="06">
+                <div class="info">
                     <a href="#">Details</a>
                 </div>
             </div>
@@ -795,10 +809,10 @@
                         <h3>Business Analysis</h3>
                         <p>
                             In this crucial initial phase 
-                            of website development, thorough 
-                            research and assessment of the 
-                            business's goals, target audience, 
-                            and competitors are conducted.
+                            of development, thorough 
+                            research and assessment of the main 
+                            goals, audience, and competitors 
+                            are conducted.
                         </p>
                     </div>
                 </div>
@@ -845,21 +859,25 @@
             <img src="images/events.png">
             <div class="info">
                 <div class="counter">
-                    <div class="unit">
-                        <span>00</span>
-                        <span>Days</span>
+                    <div class="two-units">
+                        <div class="unit">
+                            <span>00</span>
+                            <span>Days</span>
+                        </div>
+                        <div class="unit">
+                            <span>00</span>
+                            <span>Hours</span>
+                        </div>
                     </div>
-                    <div class="unit">
-                        <span>00</span>
-                        <span>Hours</span>
-                    </div>
-                    <div class="unit">
-                        <span>00</span>
-                        <span>Minutes</span>
-                    </div>
-                    <div class="unit">
-                        <span>00</span>
-                        <span>Secondes</span>
+                    <div class="two-units">
+                        <div class="unit">
+                            <span>00</span>
+                            <span>Minutes</span>
+                        </div>
+                        <div class="unit">
+                            <span>00</span>
+                            <span>Secondes</span>
+                        </div>
                     </div>
                 </div>
                 <h1>Tech Masters Event 2023</h1>
@@ -871,11 +889,13 @@
                     tech industry.
                 </p>
             </div>
+            <div class="subscribe">
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
         </div>
-        <form action="">
-            <input type="email" placeholder="Enter your email">
-            <input type="submit" value="Subscribe">
-        </form>
     </section>
     <!-- / Events -->
 
@@ -946,32 +966,32 @@
                     </div>
                     <ul>
                         <li>
-                            <div class="chapter">How To Create Sub Domain</div>
-                            <div class="timing">01:18</div>
+                            <div class="title">How To Create Sub Domain</div>
+                            <div class="time">01:18</div>
                         </li>
                         <li>
-                            <div class="chapter">Playing With The DNS </div>
-                            <div class="timing">03:20</div>
+                            <div class="title">Playing With The DNS </div>
+                            <div class="time">03:20</div>
                         </li>
                         <li>
-                            <div class="chapter">Everything About The Virtual Hosts </div>
-                            <div class="timing">05:48</div>
+                            <div class="title">Everything About The Virtual Hosts </div>
+                            <div class="time">05:48</div>
                         </li>
                         <li>
-                            <div class="chapter">How To Monitor Your Website </div>
-                            <div class="timing">08:10</div>
+                            <div class="title">How To Monitor Your Website </div>
+                            <div class="time">08:10</div>
                         </li>
                         <li>
-                            <div class="chapter">Uncharted Beating The Last Boss</div>
-                            <div class="timing">09:08</div>
+                            <div class="title">Uncharted Beating The Last Boss</div>
+                            <div class="time">09:08</div>
                         </li>
                         <li>
-                            <div class="chapter">Ys Oath In Felghana Overview</div>
-                            <div class="timing">10:32</div>
+                            <div class="title">Ys Oath In Felghana Overview</div>
+                            <div class="time">10:32</div>
                         </li>
                         <li>
-                            <div class="chapter">Ys Series All Games Ending</div>
-                            <div class="timing">12:50</div>
+                            <div class="title">Ys Series All Games Ending</div>
+                            <div class="time">12:50</div>
                         </li>
                     </ul>
                 </div>
